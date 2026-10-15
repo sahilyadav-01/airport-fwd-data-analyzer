@@ -1,0 +1,79 @@
+{
+  "project": {
+    "name": "ICAO Aerodrome Workshop FAARFIELD Benchmark",
+    "airport": "Bangkok International Airport (BKK / VTBS)",
+    "runway": "Runway 01R-19L",
+    "engineer": "David R. Brill, P.E., Ph.D. & Harold Muniz",
+    "date": "2026-10-15",
+    "designLifeYears": 20,
+    "pavementType": "New Flexible"
+  },
+  "traffic": [
+    {
+      "name": "S-30",
+      "grossWeightKg": 13608,
+      "annualDepartures": 8000,
+      "annualGrowthPercent": 0.0,
+      "percentOnMainGear": 0.95,
+      "gearType": "Single"
+    },
+    {
+      "name": "Fokker F-100",
+      "grossWeightKg": 44452,
+      "annualDepartures": 6500,
+      "annualGrowthPercent": 0.0,
+      "percentOnMainGear": 0.95,
+      "gearType": "Dual"
+    },
+    {
+      "name": "B737-300",
+      "grossWeightKg": 62822,
+      "annualDepartures": 5000,
+      "annualGrowthPercent": 0.0,
+      "percentOnMainGear": 0.95,
+      "gearType": "Dual"
+    },
+    {
+      "name": "B767-300ER",
+      "grossWeightKg": 158757,
+      "annualDepartures": 3200,
+      "annualGrowthPercent": 0.0,
+      "percentOnMainGear": 0.95,
+      "gearType": "Dual Tandem"
+    },
+    {
+      "name": "A380-800",
+      "grossWeightKg": 544310,
+      "annualDepartures": 400,
+      "annualGrowthPercent": 0.0,
+      "percentOnMainGear": 0.95,
+      "gearType": "Multi-wheel"
+    },
+    {
+      "name": "B777-300",
+      "grossWeightKg": 263083,
+      "annualDepartures": 1500,
+      "annualGrowthPercent": 0.0,
+      "percentOnMainGear": 0.95,
+      "gearType": "Triple Dual Tandem"
+    }
+  ],
+  "soilProperties": {
+    "meanCbr": 6.7,
+    "stdevCbr": 2.04,
+    "designCbr": 4.7,
+    "designModulusMpa": 47.0,
+    "designKPci": 95.0
+  },
+  "flexibleStructure": {
+    "surface": { "name": "P-401 HMA Surface", "thicknessMm": 100, "modulusMpa": 3000 },
+    "base": { "name": "P-209 Crushed Aggregate Base", "thicknessMm": 220, "modulusMpa": 450 },
+    "subbase": { "name": "P-154 Uncrushed Aggregate Subbase", "thicknessMm": 300, "modulusMpa": 150 },
+    "subgrade": { "name": "Subgrade Soil", "cbr": 4.7, "modulusMpa": 47.0 }
+  },
+  "rigidStructure": {
+    "slab": { "name": "P-501 PCC Concrete Surface", "thicknessMm": 410, "flexuralStrengthMpa": 4.8 },
+    "base": { "name": "P-306 Econocrete Base", "thicknessMm": 150, "modulusMpa": 5000 },
+    "subgrade": { "name": "Subgrade Soil", "kValuePci": 95.0 }
+  }
+}
