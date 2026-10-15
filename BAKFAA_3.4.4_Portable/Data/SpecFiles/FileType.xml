@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<FILE_TYPE>
+	<FWDSpecDetect>
+		<NameIndicator>KUAB</NameIndicator>
+		<CountSensors>Yes</CountSensors>
+		<SensorsSplitType>Check</SensorsSplitType>
+		<SensorsDelim>7</SensorsDelim>
+		<SensorsStartPos>20</SensorsStartPos>
+		<SensorLine>ISensor Number</SensorLine>
+		<SpecFileName>KUAB_Spec</SpecFileName>
+		<FileType>KUAB FWD File</FileType>
+	</FWDSpecDetect>
+	<FWDSpecDetect>
+		<NameIndicator>M3, P</NameIndicator>
+		<CountSensors>Yes</CountSensors>
+		<SensorsSplitType>D</SensorsSplitType>
+		<SensorsDelim>Comma</SensorsDelim>
+		<SensorsStartPos>10</SensorsStartPos>
+		<SensorLine>Sensors</SensorLine>
+		<SpecFileName>JILS_Spec_w_Sensors</SpecFileName>
+		<FileType>JILS FWD File</FileType>
+	</FWDSpecDetect>
+	<FWDSpecDetect>
+		<NameIndicator>M3</NameIndicator>
+		<CountSensors>Yes</CountSensors>
+		<SensorsSplitType>D</SensorsSplitType>
+		<SensorsDelim>Comma</SensorsDelim>
+		<SensorsStartPos>10</SensorsStartPos>
+		<SensorLine>Sensors</SensorLine>
+		<SpecFileName>JILS_Spec</SpecFileName>
+		<FileType>JILS FWD File</FileType>
+	</FWDSpecDetect>
+	<FWDSpecDetect>
+		<NameIndicator>M5, P</NameIndicator>
+		<CountSensors>Yes</CountSensors>
+		<SensorsSplitType>D</SensorsSplitType>
+		<SensorsDelim>Comma</SensorsDelim>
+		<SensorsStartPos>10</SensorsStartPos>
+		<SensorLine>Sensors</SensorLine>
+		<SpecFileName>JILS_Spec_w_Sensors</SpecFileName>
+		<FileType>JILS FWD File</FileType>
+	</FWDSpecDetect>
+	<FWDSpecDetect>
+		<NameIndicator>M5</NameIndicator>
+		<CountSensors>Yes</CountSensors>
+		<SensorsSplitType>D</SensorsSplitType>
+		<SensorsDelim>Comma</SensorsDelim>
+		<SensorsStartPos>10</SensorsStartPos>
+		<SensorLine>Sensors</SensorLine>
+		<SpecFileName>JILS_Spec</SpecFileName>
+		<FileType>JILS FWD File</FileType>
+	</FWDSpecDetect>
+	<!--Dynatest File types - strongest/most unique indicators first-->
+	<FWDSpecDetect>
+		<NameIndicator>R80</NameIndicator>
+		<CountSensors>No</CountSensors>
+		<SensorsSplitType></SensorsSplitType>
+		<SensorsDelim></SensorsDelim>
+		<SensorsStartPos></SensorsStartPos>
+		<SensorLine></SensorLine>
+		<SpecFileName>Dynatest_R80_Spec</SpecFileName>
+		<FileType>Dyna R80 FWD File</FileType>
+	</FWDSpecDetect>
+	<FWDSpecDetect>
+		<NameIndicator>R32</NameIndicator>
+		<CountSensors>No</CountSensors>
+		<SensorsSplitType></SensorsSplitType>
+		<SensorsDelim></SensorsDelim>
+		<SensorsStartPos></SensorsStartPos>
+		<SensorLine></SensorLine>
+		<SpecFileName>Dynatest_R32_Spec</SpecFileName>
+		<FileType>Dyna R32 FWD File</FileType>
+	</FWDSpecDetect>
+	<FWDSpecDetect>
+		<NameIndicator>5001</NameIndicator>
+		<CountSensors>No</CountSensors>
+		<SensorsSplitType></SensorsSplitType>
+		<SensorsDelim></SensorsDelim>
+		<SensorsStartPos></SensorsStartPos>
+		<SensorLine></SensorLine>
+		<SpecFileName>Dynatest_F25_Spec</SpecFileName>
+		<FileType>Dyna F25 FWD File</FileType>
+	</FWDSpecDetect>
+	<FWDSpecDetect>
+		<NameIndicator>120SI</NameIndicator>
+		<CountSensors>No</CountSensors>
+		<SensorsSplitType></SensorsSplitType>
+		<SensorsDelim></SensorsDelim>
+		<SensorsStartPos></SensorsStartPos>
+		<SensorLine></SensorLine>
+		<SpecFileName>Dynatest_F20_Spec</SpecFileName>
+		<FileType>Dyna F20 FWD File</FileType>
+	</FWDSpecDetect>
+	<FWDSpecDetect>
+		<NameIndicator>S 1</NameIndicator>
+		<CountSensors>No</CountSensors>
+		<SensorsSplitType></SensorsSplitType>
+		<SensorsDelim></SensorsDelim>
+		<SensorsStartPos></SensorsStartPos>
+		<SensorLine></SensorLine>
+		<SpecFileName>Dynatest_F20_Spec</SpecFileName>
+		<FileType>Dyna F20 FWD File</FileType>
+	</FWDSpecDetect>
+	<FWDSpecDetect>
+		<NameIndicator>PROJECTNAME CLIENT</NameIndicator>
+		<CountSensors>Yes</CountSensors>
+		<SensorsSplitType>D</SensorsSplitType>
+		<SensorsDelim>Tab</SensorsDelim>
+		<SensorsStartPos>24</SensorsStartPos>
+		<SensorLine>Radial offset</SensorLine>
+		<SpecFileName>CarlBro_Spec</SpecFileName>
+		<FileType>CarlBro File</FileType>
+	</FWDSpecDetect>
+	<FWDSpecDetect>
+		<NameIndicator>ROAD SYSTEM</NameIndicator>
+		<CountSensors>Yes</CountSensors>
+		<SensorsSplitType>D</SensorsSplitType>
+		<SensorsDelim>Tab</SensorsDelim>
+		<SensorsStartPos>24</SensorsStartPos>
+		<SensorLine>Radial offset</SensorLine>
+		<SpecFileName>CarlBro_Spec</SpecFileName>
+		<FileType>CarlBro File</FileType>
+	</FWDSpecDetect>
+	<FWDSpecDetect>
+		<NameIndicator>AVAILABLE SENSORS</NameIndicator>
+		<CountSensors>No</CountSensors>
+		<SensorsSplitType></SensorsSplitType>
+		<SensorsDelim></SensorsDelim>
+		<SensorsStartPos></SensorsStartPos>
+		<SensorLine></SensorLine>
+		<SpecFileName>PaveTesting_Spec</SpecFileName>
+		<FileType>Pave Testing File</FileType>
+	</FWDSpecDetect>
+	<FWDSpecDetect>
+		<NameIndicator>Pavement Deflection Data Exchange File</NameIndicator>
+		<CountSensors>No</CountSensors>
+		<SensorsSplitType></SensorsSplitType>
+		<SensorsDelim></SensorsDelim>
+		<SensorsStartPos></SensorsStartPos>
+		<SensorLine></SensorLine>
+		<SpecFileName>PDDX_Spec</SpecFileName>
+		<FileType>PDDX File</FileType>
+	</FWDSpecDetect>
+	<FWDSpecDetect>
+		<NameIndicator>NEWFWD</NameIndicator>
+		<CountSensors>Yes</CountSensors>
+		<SensorsSplitType>D</SensorsSplitType>
+		<SensorsDelim>Comma</SensorsDelim>
+		<SensorsStartPos>20</SensorsStartPos>
+		<SensorLine>Sensor Number</SensorLine>
+		<SpecFileName>NEWFWD_Spec</SpecFileName>
+		<FileType>NEWFWD FWD File</FileType>
+	</FWDSpecDetect>
+</FILE_TYPE>

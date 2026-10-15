@@ -1,0 +1,432 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+BAKFAA
+</name>
+</assembly>
+<members>
+<member name="T:BAKFAA.My.MyWpfExtension">
+ <summary>
+ Module used to define the properties that are available in the My Namespace for WPF
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:BAKFAA.My.MyWpfExtension.Application">
+ <summary>
+ Returns the application object for the running application
+ </summary>
+</member>
+<member name="P:BAKFAA.My.MyWpfExtension.Computer">
+ <summary>
+ Returns information about the host computer.
+ </summary>
+</member>
+<member name="P:BAKFAA.My.MyWpfExtension.User">
+ <summary>
+ Returns information for the current user.  If you wish to run the application with the current 
+ Windows user credentials, call My.User.InitializeWithWindowsUser().
+ </summary>
+</member>
+<member name="P:BAKFAA.My.MyWpfExtension.Log">
+ <summary>
+ Returns the application log. The listeners can be configured by the application's configuration file.
+ </summary>
+</member>
+<member name="P:BAKFAA.My.MyWpfExtension.Windows">
+ <summary>
+ Returns the collection of Windows defined in the project.
+ </summary>
+</member>
+<member name="T:BAKFAA.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:BAKFAA.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:BAKFAA.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="T:BAKFAA.Controls.SelectDropsMod">
+<summary>
+SelectDropsMod
+</summary>
+</member>
+<member name="M:BAKFAA.Controls.SelectDropsMod.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:BAKFAA.Controls.SelectDropsDefl">
+<summary>
+SelectDropsDefl
+</summary>
+</member>
+<member name="M:BAKFAA.Controls.SelectDropsDefl.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:BAKFAA.Controls.SelectDrops">
+<summary>
+SelectDrops
+</summary>
+</member>
+<member name="M:BAKFAA.Controls.SelectDrops.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:BAKFAA.Controls.SelectLTE">
+<summary>
+SelectLTE
+</summary>
+</member>
+<member name="M:BAKFAA.Controls.SelectLTE.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:BAKFAA.Controls.SelectShowDrops">
+<summary>
+SelectShowDrops
+</summary>
+</member>
+<member name="M:BAKFAA.Controls.SelectShowDrops.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:BAKFAA.FWDDrops">
+ <summary>
+ FWDDrops Model Class
+ Created By:  David Ross
+ Date:  7/19/2019
+ Purpose:  Layer Definition with Collection of Layers
+ </summary>
+</member>
+<member name="T:BAKFAA.MaxSensor">
+ <summary>
+ Sensor Model Class
+ Created By:  Marti Denis
+ Date:  8/14/2020
+ Purpose:  MaxSensor Definition with Collection of MaxDefl
+ </summary>
+</member>
+<member name="T:BAKFAA.PaveName">
+ <summary>
+ PaveNames Model Class
+ Created By:  Marti Denis
+ Date:  12/11/2019
+ Purpose:  Provides a list of Drops per TEST, this will allow user to select just the 3rd drop in a test (Collection of unique drop numbers)
+ </summary>
+</member>
+<member name="T:BAKFAA.DropNumber">
+ <summary>
+ DropNumbers Model Class
+ Created By:  Marti Denis
+ Date:  12/11/2019
+ Purpose:  Provides a list of Drops per TEST, this will allow user to select just the 3rd drop in a test (Collection of unique drop numbers)
+ </summary>
+</member>
+<member name="T:BAKFAA.ChartLineSeries">
+ <summary>
+ ChartLineSeries Model Class
+ Created By:  David Ross
+ Date:  1/23/2020
+ Purpose:  ChartLineSeries with Collection of Objects
+ </summary>
+</member>
+<member name="T:BAKFAA.ShowDrops">
+ <summary>
+ PaveNames Model Class
+ Created By:  Marti Denis
+ Date:  12/11/2019
+ Purpose:  Provides a list of Drops per TEST, this will allow user to select just the 3rd drop in a test (Collection of unique drop numbers)
+ </summary>
+</member>
+<member name="T:BAKFAA.BackCalc">
+ <summary>
+ BackCalc Class
+ Created By:  Marti Denis
+ Date:  11/1/2018
+ Purpose:  This class performs the backcalculation using the values from the basin and structure objects
+ This class also makes calls to the LEAF class for LEAF calculations and the chart class to display 
+ results on the user interface.
+ </summary>
+</member>
+<member name="M:BAKFAA.DOM.GetDataFromDataTable(System.String)">
+ <summary>
+ Reads uploaded XML file as an input 
+ </summary>
+ <param name="XMLLoaded"></param>
+</member>
+<member name="M:BAKFAA.DOM.UpdateDataSet(System.Data.DataTable,System.String)">
+ <summary>
+ Writes XML on disk when user didnot upload XML file. It triggers when user reads a .pro, .erd, or .txt file instead of uploading XML file
+ </summary>
+ <param name="ProfileList"></param>
+</member>
+<member name="T:BAKFAA.Basin">
+ <summary>
+ Basin Class
+ Created By:  Marti Denis
+ Date:  11/1/2018
+ Purpose:  This class is for creating the elements of the Basin List.  The values are parse from fwd files.
+ The elements are used in calculating and displaying backcalculation.
+ </summary>
+</member>
+<member name="T:BAKFAA.clsOutputText">
+ <summary>
+ OutputText Class
+ Created By:  Marti Denis
+ Date:  11/1/2018
+ Purpose:  This class stores output data for easy access from all areas of the program.
+ </summary>
+</member>
+<member name="T:BAKFAA.Utilities.PavementTypeToSeedModulusConverter">
+ <summary>
+ PavementTypeToSeedModulusConverter Class
+ Created By:  David Ross
+ Date:  7/22/2019
+ Purpose:  Converts PavementTypeId to SeedModulus value for datagrid
+             Return truncates decimal positions
+ </summary>
+</member>
+<member name="T:BAKFAA.Drops">
+ <summary>
+ Drops Class
+ Created By:  Marti Denis
+ Date:  5/29/2019
+ Purpose:  This class is for holding the list of drops that will fill the DropList on the WPF form.
+ </summary>
+</member>
+<member name="T:BAKFAA.FWDWINParser">
+ <summary>
+ FWDWINParser Class
+ Created By:  Marti Denis
+ Date:  5/1/2018
+ Purpose:  This class performs parsing of all types of FWD files.  It parses the files by following the associated spec.
+ The parsing separates the data and stores into the appropriate variables or tables.  These values are saved into BasinList list(Of Basin) 
+ This allows for easily looping through values for calculations.
+ </summary>
+</member>
+<member name="T:BAKFAA.ViewModels.BatchGraphViewModel">
+ <summary>
+ BatchGraphViewModel Class
+ Programmer:  David Ross
+ Date:  1/23/2020
+ Purpose:  ViewModel class that provides funtions for BatchGraph view
+ </summary>
+</member>
+<member name="M:BAKFAA.ViewModels.BatchGraphViewModel.AddLogarithmicAxisAnnotations">
+ <summary>
+ Creates Log Axis Intervals
+ </summary>
+</member>
+<member name="T:BAKFAA.ViewModels.LocationsTreeViewModel">
+ <summary>
+ This view model is used for populating the explorer side bar with user data.
+ </summary>
+</member>
+<member name="M:BAKFAA.ViewModels.MainWindowViewModel.GenerateListBoxItemText(System.String,System.String,System.String,System.String,System.String,System.Double[])">
+ <summary>
+ lstDrop items are created after loading of FWD file.
+ lstDrop items will be updated after deflection change also.
+ for easier maintenance and cosistent item text, the item text formation is moved in this function
+ </summary>
+ <param name="strDeflBasin"></param>
+ <param name="strLoadLevel"></param>
+ <param name="strBasinNumber"></param>
+ <param name="strDistance"></param>
+ <param name="strPlateLoad"></param>
+ <param name="deflections"></param>
+ <returns></returns>
+</member>
+<member name="M:BAKFAA.ViewModels.MainWindowViewModel.GetDeflectionsFromTextBoxes(System.Boolean,System.Boolean)">
+ <summary>
+ This function will return the deflection data from the textboxes 
+ Additionally it will convert the deflection data if bApplyUnitConversion is true 
+ If bOrderByTextBoxInd is true, data will be as per text box index else by basin defl order
+ </summary>
+ <param name="bApplyUnitConversion"></param>
+ <returns></returns>
+</member>
+<member name="M:BAKFAA.ViewModels.MainWindowViewModel.SetYoungsMod(System.Int32,System.Double,System.Int32,System.Int32)">
+ <summary>
+Young's Mod need to be shown only after back calculation
+Insted of adding check everywhere, Added this sub for cleaner code
+ This sub will set the YoungMod value conditionally
+ in the YoungMod text box having index value of ind
+ if decimal Places are not supplied, value will be rounded with 0 decimal
+ </summary>
+</member>
+<member name="M:BAKFAA.ViewModels.MainWindowViewModel.SetSensorDefl(System.Int32,System.Double,System.Boolean,System.Int32,System.Int32)">
+ <summary>
+ This sub will set the measured deflection value
+ in the measured deflection text box having index value of ind
+ if decimal Places are not supplied, value will be rounded with 0 decimal
+ if setDeflInTag is true, then deflection value will stored in the tag
+ </summary>
+</member>
+<member name="M:BAKFAA.ViewModels.MainWindowViewModel.SetCalculatedDefl(System.Int32,System.Nullable{System.Double},System.Int32,System.Int32)">
+ <summary>
+ This sub will set the calculated deflection values or clear if defl is nothing
+ in the measured deflection text box having index value of ind
+ if decimal Places are not supplied, value will be rounded with 0 decimal
+ </summary>
+</member>
+<member name="M:BAKFAA.ViewModels.MainWindowViewModel.SetValueToTextBox(System.Object,System.Double,System.Int32,System.Int32)">
+ <summary>
+ Common function to set value in a text box after rounding data as per paramters
+ Changed to now set value in a Model
+ </summary>
+</member>
+<member name="M:BAKFAA.ViewModels.MainWindowViewModel.DeleteSelectedLayer">
+ <summary>
+ Used when the 'Delete Selected Layer' button is clicked.
+ </summary>
+</member>
+<member name="M:BAKFAA.ViewModels.MainWindowViewModel.CreateMaterial(System.String)">
+ <summary>
+ Creates a new material based on a string input. This function is used to over write the instance variable named 'Material'.
+ </summary>
+ <param name="layerName"></param>
+ <returns></returns>
+</member>
+<member name="M:BAKFAA.ViewModels.MainWindowViewModel.BuildPavementList">
+ <summary>
+ Used for creating a list of pavements to be assigned to each layer object.
+ </summary>
+ <returns>A list of Pavement objects</returns>
+</member>
+<member name="M:BAKFAA.ViewModels.MainWindowViewModel.RBSelectionChanged">
+ <summary>
+ Sets the instance variable named 'Material' to its respective radio input selection.
+ This should method only be used by the layer properties window.
+ </summary>
+</member>
+<member name="M:BAKFAA.ViewModels.MainWindowViewModel.MaterialsArrangementValidationRules(BAKFAA.Layer,System.Int32)">
+ <summary>
+ Contains checks to validate whether the layer can be added to the structure
+ </summary>
+ <param name="material"></param>
+ <param name="index"></param>
+ <returns></returns>
+</member>
+<member name="M:BAKFAA.ViewModels.MainWindowViewModel.MaterialMoveRules(System.Int32)">
+ <summary>
+ Checks if the user selected layer can be moved to the desired position.
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:BAKFAA.ViewModels.MainWindowViewModel.RefreshHtml(System.Int32)">
+ <summary>
+ Used in station details right side pane 
+ cs note: this side bar doesn't add much value to the application since it's easier to view FWD data in the bottom pane.
+ </summary>
+ <param name="testNumber"></param>
+ <returns>HTML paragraph element as a string</returns>
+</member>
+<member name="M:BAKFAA.ViewModels.MainWindowViewModel.OnChangeImageGraphics(System.Object)">
+ <summary>
+ Changes the set of layer images on 'Change Pavement Graphics' button click.
+ </summary>
+ <param name="context"></param>
+</member>
+<member name="T:BAKFAA.Views.BatchGraph">
+<summary>
+BatchGraph
+</summary>
+</member>
+<member name="M:BAKFAA.Views.BatchGraph.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:BAKFAA.Views.FWDInterface">
+<summary>
+FWDInterface
+</summary>
+</member>
+<member name="M:BAKFAA.Views.FWDInterface.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:BAKFAA.Views.MainWindow">
+<summary>
+MainWindow
+</summary>
+</member>
+<member name="M:BAKFAA.Views.MainWindow.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:BAKFAA.frmFWDFile">
+<summary>
+frmFWDFile
+</summary>
+</member>
+<member name="M:BAKFAA.frmFWDFile.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:BAKFAA.Layer">
+ <summary>
+ Layer Model Class
+ Created By:  David Ross
+ Date:  7/19/2019
+ Purpose:  Layer Definition with Collection of Layers
+ </summary>
+</member>
+<member name="T:BAKFAA.Pavement">
+ <summary>
+ Pavement Model Class
+ Created By:  David Ross
+ Date:  7/19/2019
+ Purpose:  Pavement Definition with Collection of Pavements
+ </summary>
+</member>
+<member name="T:BAKFAA.Sensor">
+ <summary>
+ Sensor Model Class
+ Created By:  David Ross
+ Date:  7/18/2019
+ Purpose:  Sensor Definition with Collection of Sensors
+ </summary>
+</member>
+<member name="M:BAKFAA.ParserBase.#ctor">
+ <summary>
+ ParserBase Class
+ Created By:  Marti Denis
+ Date:  11/1/2018
+ Purpose:  This class is used to house function that can be shared amongst all classes.
+ </summary>
+</member>
+<member name="T:BAKFAA.Application">
+<summary>
+Application
+</summary>
+</member>
+<member name="M:BAKFAA.Application.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="M:BAKFAA.Application.Main">
+<summary>
+Application Entry Point.
+</summary>
+</member>
+</members>
+</doc>
