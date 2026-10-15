@@ -1,0 +1,681 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+FaarFieldModel
+</name>
+</assembly>
+<members>
+<member name="T:FaarFieldModel.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:FaarFieldModel.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:FaarFieldModel.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="M:FaarFieldModel.AirplaneInfo.#ctor">
+ <summary>
+ This is the default constructor for the AirplaneInfo class.
+ </summary>
+</member>
+<member name="M:FaarFieldModel.AirplaneInfo.#ctor(FaarFieldModel.Interfaces.IAirplaneInfo,FaarFieldModel.Interfaces.IFaarFieldModelFactory)">
+ <summary>
+ This is the alternate constructor for the AirplaneInfo class.
+ It uses an already existing instance AirplaneInfo object and factory.
+ </summary>
+ <param name="existing">This is the already existing airplane info.</param>
+ <param name="factory">This the factory object that is passed in.</param>
+</member>
+<member name="M:FaarFieldModel.AnalysisType.#ctor">
+ <summary>
+ This is the default constructor of the AnalysisType.
+ Sets all the values to default.
+ </summary>
+</member>
+<member name="M:FaarFieldModel.AnalysisType.#ctor(System.Int32,System.String,System.Boolean,System.Boolean,System.Collections.ObjectModel.ObservableCollection{FaarFieldModel.Interfaces.IMaterial})">
+ <summary>
+ This is an alternate constructor.
+ It is used when there is a new kind of analaysis type.
+ </summary>
+ <param name="index">An integer variable used to represent the index of the analysis type in the list.</param>
+ <param name="name">A string variable used to represent the name of the analysis type. </param>
+ <param name="subgradeReaction">A boolean varaible created to determine if an analysis type has a subgrade reaction.</param>
+ <param name="rehabilitation">A boolean variable created to determine if an analysis type is rehabilitized.</param>
+ <param name="layers">This is the collection of materials meant to represent the layers within an analysis type.</param>
+</member>
+<member name="M:FaarFieldModel.AnalysisType.#ctor(FaarFieldModel.Interfaces.IFaarFieldModelFactory,FaarFieldModel.Interfaces.IAnalysisType)">
+ <summary>
+ This is the an alternate constructor.
+ It is used when there is a new analysis type that it being copied from an already existing analysis type.
+ </summary>
+ <param name="factory">This the factory object used for copying the values.</param>
+ <param name="existing">This is the already existing analysis type that is passed in.</param>
+</member>
+<member name="M:FaarFieldModel.Area.#ctor">
+ <summary>
+ This is the defualt constructor for the Area class.
+ </summary>
+</member>
+<member name="M:FaarFieldModel.Area.#ctor(System.Double,FaarFieldModel.Interfaces.IMeasurmentSystem)">
+ <summary>
+ The constructor for Area class.
+ Sets the value while using a double and measurement system.
+ Specifically for inches squared to millimeter squared.
+ </summary>
+ <param name="value">A double variable meant to represent the area.</param>
+ <param name="measurementSystem">The measurement system used for the area.</param>
+</member>
+<member name="P:FaarFieldModel.CoordinateValidationRange.ValidationX">
+ <summary>
+ X direction validation
+ </summary>
+</member>
+<member name="P:FaarFieldModel.CoordinateValidationRange.ValidationY">
+ <summary>
+ Y direction validation
+ </summary>
+</member>
+<member name="P:FaarFieldModel.CoordinateValidationRange.Required">
+ <summary>
+ This validation ranged must be run
+ </summary>
+</member>
+<member name="M:FaarFieldModel.CoordinateValidationRange.#ctor(FaarFieldModel.Interfaces.IValidationRange,FaarFieldModel.Interfaces.IValidationRange,System.Boolean)">
+ <summary>
+ Constructor to made to set the x and y coordinates to the validation instances.
+ </summary>
+ <param name="validationX">This is the x value.</param>
+ <param name="validationY">This is the Y value.</param>
+ <param name="required">This is a boolean variable made to represent if the validation range is required or not.</param>
+</member>
+<member name="M:FaarFieldModel.DesignOptions.#ctor">
+ <summary>
+ This is the default constructor for the DesignOptions class.
+ </summary>
+</member>
+<member name="M:FaarFieldModel.DesignOptions.#ctor(FaarFieldModel.Interfaces.IFaarFieldModelFactory)">
+ <summary>
+ This is one of the alternate constructors for the DesignOptions class.
+ This one is meant to initialize the values using a factory object.
+ </summary>
+ <param name="factory">This is the factory object that is passed in to get values from.</param>
+</member>
+<member name="M:FaarFieldModel.DesignOptions.#ctor(FaarFieldModel.Interfaces.IFaarFieldModelFactory,FaarFieldModel.Interfaces.IDesignOptions)">
+ <summary>
+ This is another contructor for the DesignOptions class.
+ It uses an already existing DesignOptions object to get its values.
+ </summary>
+ <param name="factory">This is the factory object that is being used.</param>
+ <param name="existing">This is the already existing DesignOptions object.</param>
+</member>
+<member name="M:FaarFieldModel.FaarFieldJob.#ctor">
+ <summary>
+ This is the default FaarFieldJob constructor.
+ </summary>
+</member>
+<member name="M:FaarFieldModel.FaarFieldJob.#ctor(FaarFieldModel.Interfaces.IFaarFieldModelFactory,System.String)">
+ <summary>
+ This is one of the constructors for the FaarFieldJob class.
+ </summary>
+ <param name="factory">The factory that is used to create a faarfield job.</param>
+ <param name="defaultFilePath">A string variable that is the default file path of the job created.</param>
+</member>
+<member name="M:FaarFieldModel.FaarFieldJob.#ctor(FaarFieldModel.Interfaces.IFaarFieldModelFactory,FaarFieldModel.Interfaces.IFaarFieldJob)">
+ <summary>
+ This is the constructor for the FaarFieldJob class if there is an existing job to clone.
+ </summary>
+ <param name="factory">The factory that is used to create a faarfield job.</param>
+ <param name="existing">This is an already existing job that gets its value copied.</param>
+</member>
+<member name="M:FaarFieldModel.Interfaces.FaarFieldDefault.#ctor(System.String,System.String)">
+ <summary>
+ This is the constructor for the FaarFieldDefault class.
+ </summary>
+ <param name="materialPath">This is the path where the materials are located.</param>
+ <param name="aircraftPath">This is the path where the aircrafts are located.</param>
+</member>
+<member name="M:FaarFieldModel.Interfaces.IFaarFieldModelFactory.CreateUsCustomary">
+ <summary>
+ Create US Customary MeasurementSystem object
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:FaarFieldModel.Interfaces.IFaarFieldModelFactory.CreateMetric">
+ <summary>
+ Create SI/Metric MeasurementSystem object
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:FaarFieldModel.Interfaces.IFaarFieldModelFactory.CreateFaarFieldJob(FaarFieldModel.Interfaces.IFaarFieldModelFactory,System.String)">
+ <summary>
+ Create a FaarField object from the default files.
+ </summary>
+ <param name="factory">FAARFIELD factory to inject dependencies</param>
+ <param name="defaultFilePath">Path to appropriate default files</param>
+ <returns></returns>
+</member>
+<member name="M:FaarFieldModel.Interfaces.IFaarFieldModelFactory.CreateFaarFieldJob(System.String)">
+ <summary>
+ Create a FaarField object from a serialized FaarField object
+ </summary>
+ <param name="filePath">File path to file to deserialize</param>
+ <returns></returns>
+</member>
+<member name="M:FaarFieldModel.Interfaces.IFaarFieldModelFactory.CreateFaarFieldJob(FaarFieldModel.Interfaces.IFaarFieldModelFactory,FaarFieldModel.Interfaces.IFaarFieldJob)">
+ <summary>
+ Make of a clone of an existing FaarField object
+ </summary>
+ <param name="factory">FAARFIELD factory to inject dependencies</param>
+ <param name="existingFaarField">Existing FaarField object</param>
+ <returns></returns>
+</member>
+<member name="M:FaarFieldModel.Interfaces.IFaarFieldModelFactory.CreateJobInformation">
+ <summary>
+Create a empty JobInformation.  There are no default JobInformation fields. 
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:FaarFieldModel.Interfaces.IFaarFieldModelFactory.CreateJobInformation(FaarFieldModel.Interfaces.IFaarFieldModelFactory,FaarFieldModel.Interfaces.IJobInformation)">
+ <summary>
+ Clone an existing JobInformation object
+ </summary>
+ <param name="factory">Factory to inject dependencies for clongin</param>
+ <param name="existingJobInformation">Existing JobInformation object</param>
+ <returns></returns>
+</member>
+<member name="M:FaarFieldModel.Interfaces.IFaarFieldModelFactory.CreateDesignOptions(System.String)">
+ <summary>
+ Create a DesignOption object from a default file
+ </summary>
+ <param name="defaultFilePath">Path to location of DesignOption default file</param>
+ <returns></returns>
+</member>
+<member name="M:FaarFieldModel.Interfaces.IFaarFieldModelFactory.CreateDesignOptions(FaarFieldModel.Interfaces.IFaarFieldModelFactory,FaarFieldModel.Interfaces.IDesignOptions)">
+ <summary>
+ Clone existing DesignOption object
+ </summary>
+ <param name="factory">Factory to inject dependencies necessary for clone</param>
+ <param name="existingDesignOptions">Existing DesignOptions object</param>
+ <returns></returns>
+</member>
+<member name="M:FaarFieldModel.Interfaces.IFaarFieldModelFactory.CreateSection(FaarFieldModel.Interfaces.IFaarFieldModelFactory)">
+ <summary>
+ Create a new Section by setting all Properties
+ </summary>
+ <param name="factory">Factory to inject dependencies</param>
+ <returns></returns>
+</member>
+<member name="M:FaarFieldModel.Interfaces.IFaarFieldModelFactory.CreateSection(FaarFieldModel.Interfaces.IFaarFieldModelFactory,FaarFieldModel.Interfaces.ISection)">
+ <summary>
+ Create a new Section by cloning an existing section
+ </summary>
+ <param name="factory">Factory to inject dependencies</param>
+ <param name="existingSection">Existing FAARFIELD Section</param>
+ <returns></returns>
+</member>
+<member name="M:FaarFieldModel.Interfaces.IFaarFieldModelFactory.CreateMaterial(FaarFieldModel.Interfaces.IFaarFieldModelFactory,System.String)">
+ <summary>
+ Create a material by opening opening a default version of material
+ </summary>
+ <param name="factory">Factory to inject the dependencies</param>
+ <param name="defaultFilePath">File path to material to deserialize</param>
+ <returns></returns>
+</member>
+<member name="M:FaarFieldModel.Interfaces.IFaarFieldModelFactory.CreateMaterial(FaarFieldModel.Interfaces.IFaarFieldModelFactory,FaarFieldModel.Interfaces.IMaterial,System.Boolean)">
+ <summary>
+ Clone an exisiting material.
+ </summary>
+ <param name="factory">Factory to inject dependencies</param>
+ <param name="existingLayer">Layer to clone (can be a default layer)</param>
+ <returns></returns>
+</member>
+<member name="M:FaarFieldModel.Interfaces.IFaarFieldModelFactory.CreateThickness(System.Double,FaarFieldModel.Interfaces.IMeasurmentSystem)">
+ <summary>
+ Stores thickness data (inches/mm)
+ </summary>
+ <param name="value">Thickness value</param>
+ <param name="measurementSystem">US Cutomary or metric</param>
+ <returns></returns>
+</member>
+<member name="M:FaarFieldModel.Interfaces.IFaarFieldModelFactory.CreateArea(System.Double,FaarFieldModel.Interfaces.IMeasurmentSystem)">
+ <summary>
+ Stores area data (inches/mm)
+ </summary>
+ <param name="value">Area value</param>
+ <param name="measurementSystem">US Cutomary or metric</param>
+ <returns></returns>
+</member>
+<member name="M:FaarFieldModel.Interfaces.IFaarFieldModelFactory.CreateSubgradeReaction(System.Double,FaarFieldModel.Interfaces.IMeasurmentSystem)">
+ <summary>
+ Stores subgrade reaction data (psi/in or kpa/m)
+ </summary>
+ <param name="value">Subgrade reaction value</param>
+ <param name="measurementSystem">US Cutomary or metric</param>
+ <returns></returns>
+</member>
+<member name="M:FaarFieldModel.Interfaces.IFaarFieldModelFactory.CreatePressure(System.Double,FaarFieldModel.Interfaces.IMeasurmentSystem)">
+ <summary>
+ Stores pressure data (psi or kpa)
+ </summary>
+ <param name="value">Thickness property</param>
+ <param name="measurementSystem">US Cutomary or metric</param>
+ <returns></returns>
+</member>
+<member name="M:FaarFieldModel.Interfaces.IFaarFieldModelFactory.CreateModulus(System.Double,FaarFieldModel.Interfaces.IMeasurmentSystem)">
+ <summary>
+ Stores modulues data (psi or kpa)
+ </summary>
+ <param name="value">Modulus value</param>
+ <param name="measurementSystem">US Cutomary or metric</param>
+ <returns></returns>
+</member>
+<member name="P:FaarFieldModel.Interfaces.IMeasurmentSystem.Name">
+ <summary>
+ The display name of the measurement system
+ </summary>
+ <returns>Name of the Unit of measurement</returns>
+</member>
+<member name="M:FaarFieldModel.Interfaces.IMeasurmentSystem.SetValue(System.Double,System.Double,System.Double@,System.Double@)">
+ <summary>
+ For setting values in US and SI (non-temperature).
+ </summary>
+ <param name="value"></param>
+ <param name="convert"></param>
+</member>
+<member name="M:FaarFieldModel.Interfaces.IMeasurmentSystem.SetTemperatureValue(System.Double,System.Double@,System.Double@)">
+ <summary>
+ Used for setting temperatures (not a straight conversion)
+ </summary>
+ <param name="value"></param>
+</member>
+<member name="M:FaarFieldModel.Interfaces.IMeasurmentSystem.GetValue(System.String,System.String)">
+ <summary>
+ Selects between US and SI strings
+ </summary>
+ <param name="us">US version of string</param>
+ <param name="si">SI version of string</param>
+ <returns>Returns string for Measurement System</returns>
+</member>
+<member name="M:FaarFieldModel.Interfaces.IMeasurmentSystem.GetValue(System.Double,System.Double)">
+ <summary>
+ Selects between US and SI numeric values
+ </summary>
+ <param name="us">US value</param>
+ <param name="si">SI value</param>
+ <returns>Numeric value for Measurement system</returns>
+</member>
+<member name="P:FaarFieldModel.Interfaces.IValidation.Form">
+ <summary>
+ Form that validation message appears on
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:FaarFieldModel.Interfaces.IValidation.Label">
+ <summary>
+ Label in form that message is appended to
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:FaarFieldModel.Interfaces.IValidation.Control">
+ <summary>
+ The control that gets focus on specific error
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:FaarFieldModel.Interfaces.IValidation.Message">
+ <summary>
+ Validation message that gets displayed
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:FaarFieldModel.Interfaces.IValidationRange.Validate(System.Double,System.String,System.String,System.String,FaarFieldModel.Interfaces.IMeasurmentSystem)">
+ <summary>
+ Check the input value using the input measurement system
+ </summary>
+ <param name="value">Value to check for validity</param>
+ <param name="measurementSystem">Measuremnt system value is from</param>
+ <returns>IValidate with validation method</returns>
+</member>
+<member name="P:FaarFieldModel.Interfaces.IValidationRange.Required">
+ <summary>
+ This variable validation range is required for the analysis
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:FaarFieldModel.JobInformation.#ctor">
+ <summary>
+ This is the default constructor that is used by the JobInformation class.
+ </summary>
+</member>
+<member name="M:FaarFieldModel.JobInformation.#ctor(FaarFieldModel.Interfaces.IFaarFieldModelFactory)">
+ <summary>
+ This is one of the alternate constructors for the JobInformation class.
+ It is meant to be used when there are frost depth values to be initialized.
+ </summary>
+ <param name="factory">This is the factory object passed in to create the frost depth values.</param>
+</member>
+<member name="M:FaarFieldModel.JobInformation.#ctor(FaarFieldModel.Interfaces.IFaarFieldModelFactory,FaarFieldModel.Interfaces.IJobInformation)">
+ <summary>
+ This is another alternate constructor for the JobInformation class.
+ It is meant to be used when there is another JobInformation class that exists so the values can be copied.
+ </summary>
+ <param name="factory">This is the factory object that is passed in to create certain values.</param>
+ <param name="existing">This is the already existing JobInformation object that gets its values copied.</param>
+</member>
+<member name="M:FaarFieldModel.Length.#ctor(System.Double,FaarFieldModel.Interfaces.IMeasurmentSystem)">
+ <summary>
+ This is an alternate constructor for the Length class.
+ It uses the value to represent the length as well as a measurement system.
+ Sets the value from feet to meters.
+ </summary>
+ <param name="value">A double variable meant to represent the length.</param>
+ <param name="measurementSystem">This is the measurement system that is being used.(Metric or UsCustomary)</param>
+</member>
+<member name="M:FaarFieldModel.LengthCoordinates.#ctor">
+ <summary>
+ This is the default constructor of the LengthCoordinates class.
+ </summary>
+</member>
+<member name="M:FaarFieldModel.LengthCoordinates.#ctor(FaarFieldModel.Interfaces.IDimensionalProperty,FaarFieldModel.Interfaces.IDimensionalProperty)">
+ <summary>
+ This is an alternate constructor for the LengthCoordinates class.
+ It uses two IDimensionalProperty objects as parameters.
+ </summary>
+ <param name="x">This is one of the IDimensionalProperty objects meant to represent the X coordinate.</param>
+ <param name="y">This is the second IDimensionalProperty object meant to represent the Y coordinate.</param>
+</member>
+<member name="M:FaarFieldModel.LengthValidationRange.#ctor(FaarFieldModel.Interfaces.IFaarFieldModelFactory,System.Double,System.Double,System.Boolean,FaarFieldModel.Interfaces.IMeasurmentSystem)">
+ <summary>
+ This is one of the constructors for the LengthValidationRange class.
+ It is used to initialize the values with the parameters passed in.
+ </summary>
+ <param name="factory">The factory object that has its methods used.</param>
+ <param name="minimum">The minimum value that is created from the length method in factory.</param>
+ <param name="maximum">The maximum value that is created from the length method in factory.</param>
+ <param name="required">A boolean that represents if the validation is required.</param>
+ <param name="measurementSystem">This the measurement system that the length is using.</param>
+</member>
+<member name="M:FaarFieldModel.LengthValidationRange.#ctor(FaarFieldModel.Interfaces.IFaarFieldModelFactory,FaarFieldModel.LengthValidationRange)">
+ <summary>
+ This is the second constructor for the LengthValidationRange class.
+ It is used to create the minimum and maximum values.
+ </summary>
+ <param name="factory">This is the factory object that uses methods to create the length for the minimum and maximum variables. </param>
+ <param name="validation">This is the validation object that gets its Required value copied into the Required variable in this class.</param>
+</member>
+<member name="M:FaarFieldModel.LengthValidationRange.Validate(System.Double,System.String,System.String,System.String,FaarFieldModel.Interfaces.IMeasurmentSystem)">
+ <summary>
+ This is the validation method that checks the length and verifies that it is between the minimum and maximum.
+ </summary>
+ <param name="value">The value that is being checked.</param>
+ <param name="form">The form that is passed in as a string.</param>
+ <param name="control">The name of the value that is tested.</param>
+ <param name="label">The label of the message that is shown.</param>
+ <param name="measurementSystem">This is the measurement system that is used to validate the length.</param>
+ <returns></returns>
+</member>
+<member name="M:FaarFieldModel.Material.#ctor">
+ <summary>
+ This is the default constructor for the Material class.
+ </summary>
+</member>
+<member name="M:FaarFieldModel.Metric.#ctor">
+ <summary>
+ This is the constructor for the Metric class.
+ It initializes the Name variable to "Metric".
+ </summary>
+</member>
+<member name="M:FaarFieldModel.Modulus.#ctor(System.Double,FaarFieldModel.Interfaces.IMeasurmentSystem)">
+ <summary>
+ This is the constructor  for the modulus class.
+ </summary>
+ <param name="value">This is the modulus value stored as a double.</param>
+ <param name="measurementSystem">This is the measurement system that is used for the modulus.</param>
+</member>
+<member name="P:FaarFieldModel.ModulusValidationRange.Maximum">
+ <summary>
+ Maximum for validation range
+ </summary>
+</member>
+<member name="P:FaarFieldModel.ModulusValidationRange.Minimum">
+ <summary>
+ Minimum for validation range
+ </summary>
+</member>
+<member name="P:FaarFieldModel.ModulusValidationRange.Required">
+ <summary>
+ This validation ranged must be run
+ </summary>
+</member>
+<member name="M:FaarFieldModel.ModulusValidationRange.#ctor(FaarFieldModel.Interfaces.IFaarFieldModelFactory,System.Double,System.Double,System.Boolean,FaarFieldModel.Interfaces.IMeasurmentSystem)">
+ <summary>
+ Constructor for validation range.
+ </summary>
+ <param name="minimum">Minimum for validation range</param>
+ <param name="maximum">Maximum for validation range</param>
+ <param name="required">Validation range must be checked</param>
+ <param name="measurementSystem">Measurement system for which minimum/maximum values entered</param>
+</member>
+<member name="M:FaarFieldModel.ModulusValidationRange.Validate(System.Double,System.String,System.String,System.String,FaarFieldModel.Interfaces.IMeasurmentSystem)">
+ <summary>
+ This is the validation method that checks the modulus and verifies that it is between the minimum and maximum.
+ </summary>
+ <param name="value">The value that is being checked.</param>
+ <param name="form">The form that is passed in as a string.</param>
+ <param name="control">The name of the value that is tested.</param>
+ <param name="label">The label of the message that is shown.</param>
+ <param name="measurementSystem">This is the measurement system that is used to validate the length.</param>
+</member>
+<member name="M:FaarFieldModel.Pressure.#ctor(System.Double,FaarFieldModel.Interfaces.IMeasurmentSystem)">
+ <summary>
+ Constructor for the Pressure class.
+ Uses a value and measurement system as parameters.
+ </summary>
+ <param name="value"> The value to represent the pressure. </param>
+ <param name="measurementSystem"> The measurement system used. </param>
+</member>
+<member name="P:FaarFieldModel.PressureValidationRange.Maximum">
+ <summary>
+ Maximum for validation range
+ </summary>
+</member>
+<member name="P:FaarFieldModel.PressureValidationRange.Minimum">
+ <summary>
+ Minimum for validation range
+ </summary>
+</member>
+<member name="P:FaarFieldModel.PressureValidationRange.Required">
+ <summary>
+ This validation ranged must be run
+ </summary>
+</member>
+<member name="M:FaarFieldModel.PressureValidationRange.#ctor(FaarFieldModel.Interfaces.IFaarFieldModelFactory,System.Double,System.Double,System.Boolean,FaarFieldModel.Interfaces.IMeasurmentSystem)">
+ <summary>
+ Constructor for validation range
+ </summary>
+ <param name="minimum">Minium for validation range</param>
+ <param name="maximum">Maximum for validation range</param>
+ <param name="required">Validation range must be checked</param>
+ <param name="measurementSystem">Measurement system for which minimum/maximum values entered</param>
+</member>
+<member name="M:FaarFieldModel.PressureValidationRange.Validate(System.Double,System.String,System.String,System.String,FaarFieldModel.Interfaces.IMeasurmentSystem)">
+ <summary>
+ This is the validation method that checks the pressure and verifies that it is between the minimum and maximum.
+ </summary>
+ <param name="value">The value that is being checked.</param>
+ <param name="form">The form that is passed in as a string.</param>
+ <param name="control">The name of the value that is tested.</param>
+ <param name="label">The label of the message that is shown.</param>
+ <param name="measurementSystem">This is the measurement system that is used to validate the length.</param>
+</member>
+<member name="M:FaarFieldModel.Section.#ctor">
+ <summary>
+ This is the default constructor for the Section class.
+ It initializes multiple properties at once.
+ </summary>
+</member>
+<member name="M:FaarFieldModel.Section.#ctor(FaarFieldModel.Interfaces.IFaarFieldModelFactory)">
+ <summary>
+ This is an alternate constructor for the Section class.
+ Initializes many validation properties using the methods in a factory object.
+ </summary>
+ <param name="factory">The object passed in that is used for its methods within it.</param>
+</member>
+<member name="M:FaarFieldModel.Section.#ctor(FaarFieldModel.Interfaces.IFaarFieldModelFactory,FaarFieldModel.Interfaces.ISection)">
+ <summary>
+ This is the constructor for the Section that is used when a section is being cloned.
+ It uses an already existing factory and section to initialize its values.
+ </summary>
+ <param name="factory">This is the existing factory that get its values copied and its methods used.</param>
+ <param name="existing">This is the already existing section that is being used for cloning.</param>
+</member>
+<member name="M:FaarFieldModel.Section.Validate(FaarFieldModel.Interfaces.IMeasurmentSystem)">
+ <summary>
+ This method validates the number of departures in each aircraft.
+ </summary>
+ <param name="measurementSystem">The measurement system used.</param>
+ <returns>A list of validations.</returns>
+</member>
+<member name="M:FaarFieldModel.Section.Validate(System.Collections.ObjectModel.ObservableCollection{FaarFieldModel.MaterialDefault},FaarFieldModel.Interfaces.IMeasurmentSystem)">
+ <summary>
+ This method validates the LifeValidation, SciValidation, CdfuValidation properties. 
+ </summary>
+ <param name="defaults">This is a collection of MaterialDefault objects used for the validateMaterials method.</param>
+ <param name="measurementSystem">This is the measurement system that is being used.</param>
+ <returns></returns>
+</member>
+<member name="M:FaarFieldModel.Section.ValidateMaterials(System.Collections.ObjectModel.ObservableCollection{FaarFieldModel.MaterialDefault},FaarFieldModel.Interfaces.IMeasurmentSystem)">
+ <summary>
+ This is the method used to validate a collection of materials.
+ </summary>
+ <param name="defaults">This is the collections of MaterialDefault objects.</param>
+ <param name="measurementSystem">This is the measurement system that is being used.</param>
+ <returns></returns>
+</member>
+<member name="M:FaarFieldModel.SignedAircraftLibrary.#ctor">
+ <summary>
+ This is the default constructor for the SignedAircraftLibrary class.
+ </summary>
+</member>
+<member name="M:FaarFieldModel.SubgradeReaction.#ctor">
+ <summary>
+ This is the default constructor for the SubgradeReaction class.
+ </summary>
+</member>
+<member name="M:FaarFieldModel.SubgradeReaction.#ctor(System.Double,FaarFieldModel.Interfaces.IMeasurmentSystem)">
+ <summary>
+ The constructor for the SubgradeReaction class.
+ Uses a value and measurement syster as parameters.
+ Converts psi/in to MPa/m.
+ </summary>
+ <param name="value">The reaction value.</param>
+ <param name="measurementSystem">The measurement system used.</param>
+</member>
+<member name="M:FaarFieldModel.SubgradeReactionValidationRange.#ctor(FaarFieldModel.Interfaces.IFaarFieldModelFactory,System.Double,System.Double,System.Boolean,FaarFieldModel.Interfaces.IMeasurmentSystem)">
+ <summary>
+ This is the constructor for the SubgradeReactionValidationRange class.
+ Its parameters are used to initialize its properties.
+ </summary>
+ <param name="factory">This is the factory object that is used.</param>
+ <param name="minimum">This is a double variable that is used to represent the minimum value.</param>
+ <param name="maximum">This is a double variable that is used to represent the maximum value.</param>
+ <param name="required">This is a boolean variable that represents if this validation range is required.</param>
+ <param name="measurementSystem">This is the measurement system that the values are used in.</param>
+</member>
+<member name="M:FaarFieldModel.Thickness.#ctor">
+ <summary>
+ 
+ </summary>
+</member>
+<member name="M:FaarFieldModel.Thickness.#ctor(System.Double,FaarFieldModel.Interfaces.IMeasurmentSystem)">
+ <summary>
+ This is the constructor for the thickness class.
+ Sets the values from inches to millimeters.
+ </summary>
+ <param name="value">This is the actual thickness value as a double.</param>
+ <param name="measurementSystem">This is the measurement system that the thickness is using.</param>
+</member>
+<member name="T:FaarFieldModel.UsCustomary">
+ <summary>
+ US Customary Measurement System
+ </summary>
+</member>
+<member name="P:FaarFieldModel.UsCustomary.Name">
+ <summary>
+ Display name of the Measurement system
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:FaarFieldModel.UsCustomary.#ctor">
+ <summary>
+ This is the default constructor for the UsCustomary class.
+ It also initializes the name to US Customary.
+ </summary>
+</member>
+<member name="M:FaarFieldModel.UsCustomary.GetValue(System.String,System.String)">
+ <summary>
+ Selects the US Customary value (because it that is what this Concrete class does)
+ </summary>
+ <param name="us">US Customary string value</param>
+ <param name="si">SI string value</param>
+ <returns>ALWAYS return US Customary</returns>
+</member>
+<member name="M:FaarFieldModel.UsCustomary.GetValue(System.Double,System.Double)">
+ <summary>
+ Selects the US Customary numeric value.
+ </summary>
+ <param name="us">US Customary numeric value</param>
+ <param name="si">SI numeric value</param>
+ <returns>ALWAYS US Customary</returns>
+</member>
+<member name="M:FaarFieldModel.UsCustomary.SetTemperatureValue(System.Double,System.Double@,System.Double@)">
+ <summary>
+ Sets the temperature depending on the measurement system.
+ Converts to metric if needed.
+ </summary>
+ <param name="us">US Customary numeric value</param>
+ <param name="si">SI numeric value</param>
+ <param name= "value"> The numeric value passed in </param>
+</member>
+<member name="M:FaarFieldModel.ThicknessValidationRange.#ctor(FaarFieldModel.Interfaces.IFaarFieldModelFactory,System.Double,System.Double,System.Boolean,FaarFieldModel.Interfaces.IMeasurmentSystem)">
+ <summary>
+ This is the constructor for the ThicknessValidationRange.
+ It initializes the properties in this class.
+ </summary>
+ <param name="factory"></param>
+ <param name="minimum"></param>
+ <param name="maximum"></param>
+ <param name="required"></param>
+ <param name="measurementSystem"></param>
+</member>
+<member name="T:FaarFieldModel.UserControl1">
+<summary>
+UserControl1
+</summary>
+</member>
+<member name="M:FaarFieldModel.UserControl1.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="M:FaarFieldModel.UserDefinedEvalPoints.#ctor">
+ <summary>
+ This is the default constructor for the UserDefinedEvalPoints class.
+ </summary>
+</member>
+<member name="M:FaarFieldModel.UserDefinedWheel.#ctor">
+ <summary>
+ This is the default constructor for the UserDefinedWheel class.
+ </summary>
+</member>
+</members>
+</doc>

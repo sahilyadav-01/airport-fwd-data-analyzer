@@ -1,0 +1,39 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+FaarFieldAnalysis
+</name>
+</assembly>
+<members>
+<member name="T:FaarFieldAnalysis.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:FaarFieldAnalysis.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:FaarFieldAnalysis.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="M:FaarFieldAnalysis.FEDFAA1.SetCurrentSectData(FaarFieldModel.Interfaces.IFaarFieldJob,FaarFieldModel.Interfaces.ISection)">
+ <summary>
+ Set values for current section
+ </summary>
+ <param name="job">Input FAARFIELD Job</param>
+ <param name="section">FAARFIELD Section</param>
+</member>
+<member name="M:FaarFieldAnalysis.FILEPROC.ReadJobFile(System.Int16@)">
+ <summary>
+ Reads non-XML job file.
+ </summary>
+ <param name="RetErr">File error</param>
+</member>
+</members>
+</doc>

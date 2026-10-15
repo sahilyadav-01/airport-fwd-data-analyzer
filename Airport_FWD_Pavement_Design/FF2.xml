@@ -1,0 +1,148 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+FF2
+</name>
+</assembly>
+<members>
+<member name="T:FF2.My.MyWpfExtension">
+ <summary>
+ Module used to define the properties that are available in the My Namespace for WPF
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:FF2.My.MyWpfExtension.Application">
+ <summary>
+ Returns the application object for the running application
+ </summary>
+</member>
+<member name="P:FF2.My.MyWpfExtension.Computer">
+ <summary>
+ Returns information about the host computer.
+ </summary>
+</member>
+<member name="P:FF2.My.MyWpfExtension.User">
+ <summary>
+ Returns information for the current user.  If you wish to run the application with the current 
+ Windows user credentials, call My.User.InitializeWithWindowsUser().
+ </summary>
+</member>
+<member name="P:FF2.My.MyWpfExtension.Log">
+ <summary>
+ Returns the application log. The listeners can be configured by the application's configuration file.
+ </summary>
+</member>
+<member name="P:FF2.My.MyWpfExtension.Windows">
+ <summary>
+ Returns the collection of Windows defined in the project.
+ </summary>
+</member>
+<member name="T:FF2.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:FF2.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:FF2.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="P:FF2.My.Resources.Resources.IsMaximized">
+<summary>
+  Looks up a localized string similar to .
+</summary>
+</member>
+<member name="T:FF2.Application">
+<summary>
+Application
+</summary>
+</member>
+<member name="M:FF2.Application.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="M:FF2.Application.Main">
+<summary>
+Application Entry Point.
+</summary>
+</member>
+<member name="T:FF2.Libs.HtmlUtils">
+ <summary>
+ HtmlUtils Class
+ Created By:  David Ross
+ Date:  4/8/2020
+ Purpose: HTML Helper functions to simplify html and pdf creation
+ </summary>
+</member>
+<member name="M:FF2.DOM.AddNodeToXPath(System.String,System.String,System.String)">
+ <summary>
+ Writes an XML element in a specific XPath location to 
+ the output of the WriteTemplateXML sub.
+ This sub can only be called after WriteTemplateXML is called.
+ </summary>
+ <param name="xml">The XML node that will be added to the DOM xml</param>
+ <param name="srcXPath">The xpath for input element</param>
+ <param name="destXPath">The xpath of the destination element</param>
+ 
+</member>
+<member name="M:FF2.DOM.SendPutRequest(System.String,System.String,System.String,System.String)">
+ <summary>
+ Encodes the file referenced by the OutPutPath variable and sends it in a PUT request to the PAVEAIR DOM service.
+ </summary>
+</member>
+<member name="M:FF2.ViewModels.MainWindowViewModel.ExecuteJobDownload">
+ <summary>
+ Downloads a FAARFIELD job as string data. Opens file dialog and writes the string data as an xml file.
+ </summary>
+</member>
+<member name="M:FF2.ViewModels.MainWindowViewModel.CheckForUpdates">
+ <summary>
+ Populates RemoteLibraryVersion and RemoteSoftwareVersion from server
+ Compares local versions to remote versions for available update.
+ </summary>
+</member>
+<member name="M:FF2.ViewModels.MainWindowViewModel.MaterialEditorInputLostFocus(System.Object)">
+ <summary>
+ Update related values when changes are made in material editor window
+ </summary>
+ <param name="obj"></param>
+</member>
+<member name="M:FF2.ViewModels.MainWindowViewModel.DrawPCRGraph">
+ <summary>
+ Draws PCR Chart for current Section
+ </summary>
+ <returns>PCR Graph Image as Bitmap</returns>
+</member>
+<member name="M:FF2.ViewModels.MainWindowViewModel.UpdateAnalysisTypeFromList(FaarFieldModel.Interfaces.ISection)">
+ <summary>
+ Updates the sections AnalysisType so that it can be found on the AnalysisType combobox.
+ The deserialized AnalysisType object is on on the ListAnalysis so it can't be found with SelectValue binding
+ This function replaces the deserialized Analysis type with the matching name from the ListAnalysis
+ </summary>
+ <param name="section"></param>
+</member>
+<member name="M:FF2.ViewModels.MainWindowViewModel.UpdateLayersFromDefault">
+ <summary>
+ Copy the default layers that come with an Analysis Type to the current list of layers.
+ </summary>
+</member>
+<member name="T:FF2.Views.MainWindow">
+<summary>
+MainWindow
+</summary>
+</member>
+<member name="M:FF2.Views.MainWindow.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+</members>
+</doc>
