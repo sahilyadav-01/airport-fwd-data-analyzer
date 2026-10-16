@@ -137,16 +137,22 @@ You can also launch each tool independently without the launcher:
 ## Step-by-Step Engineering Workflow
 
 ```mermaid
-flowchart TD
-    A["FWD / HWD Field Testing Data (.fwd, .f25, .pddx)"] --> B["Import into Airport FWD Backcalculation"]
-    B --> C["Configure Sensor Offsets & Pavement Layer Thicknesses"]
-    C --> D["Execute LEAF Backcalculation & Minimize RMS Deflection Error"]
-    D --> E["Extract In-Situ Elastic Moduli (Surface, Base, Subgrade)"]
-    E --> F["Launch Airport FWD Pavement Design"]
-    F --> G["Select Runway / Taxiway Design Type & Aircraft Fleet Traffic"]
-    G --> H["Enter Backcalculated Moduli & Environmental Conditions"]
-    H --> I["Run FAARFIELD Analysis (LEAF / 3D-FEM)"]
-    I --> J["Final Pavement Thickness / Overlay Design & CDF Report"]
+flowchart LR
+    subgraph S1 ["Stage 1: Backcalculation (Airport FWD Backcalculation)"]
+        direction TB
+        A["FWD / HWD Field Data<br/>(.fwd, .f25, .pddx)"] --> B["Sensor Offsets & Layer<br/>Thickness Setup"]
+        B --> C["LEAF Backcalculation &<br/>RMS Error Minimization"]
+        C --> D["In-Situ Elastic Moduli<br/>(E1, E2, ... En)"]
+    end
+
+    subgraph S2 ["Stage 2: Pavement Design (Airport FWD Pavement Design)"]
+        direction TB
+        E["Aircraft Fleet Traffic Mix<br/>(Gross Weight & Departures)"] --> F["Structural Model Setup<br/>(Using Backcalculated Moduli)"]
+        F --> G["FAARFIELD Analysis Engine<br/>(LEAF & 3D-FEM Solvers)"]
+        G --> H["Final Pavement Thickness,<br/>Overlays & CDF Report"]
+    end
+
+    D ==>|"Transfer Moduli"| F
 ```
 
 1. **Data Ingestion**: Open Backcalculation and import raw deflection bowl data from your FWD or HWD device.
