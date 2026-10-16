@@ -1,11 +1,15 @@
-# Airport FWD Data Analyzer
+<div align="center">
 
-![Airport FWD Data Analyzer Banner](assets/airport-fwd-data-analyzer-logo.png)
+<img src="assets/airport-fwd-data-analyzer-logo.png" alt="Airport FWD Data Analyzer Logo" width="220" />
+
+# Airport FWD Data Analyzer
 
 [![Platform: Windows](https://img.shields.io/badge/Platform-Windows%2010%20%7C%2011-0078D6.svg)](https://microsoft.com/windows)
 [![Target: .NET Framework 4.8](https://img.shields.io/badge/.NET%20Framework-4.8-512BD4.svg)](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 [![License: Proprietary / FAA Notice](https://img.shields.io/badge/License-Copyright%20%C2%A9%202026%20Sahil%20Yadav-blue.svg)](NOTICE.md)
 [![Status: Production Ready](https://img.shields.io/badge/Status-Verified%20%26%20Portable-success.svg)](BUILD_NOTES.md)
+
+</div>
 
 **Airport FWD Data Analyzer** is a portable, unified engineering software suite designed for airport pavement evaluation, non-destructive Falling Weight Deflectometer (FWD/HWD) testing analysis, layer modulus backcalculation, and FAA-compliant airport pavement thickness and overlay design.
 
