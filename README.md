@@ -137,22 +137,58 @@ You can also launch each tool independently without the launcher:
 ## Step-by-Step Engineering Workflow
 
 ```mermaid
-flowchart LR
-    subgraph S1 ["Stage 1: Backcalculation (Airport FWD Backcalculation)"]
-        direction TB
-        A["FWD / HWD Field Data<br/>(.fwd, .f25, .pddx)"] --> B["Sensor Offsets & Layer<br/>Thickness Setup"]
-        B --> C["LEAF Backcalculation &<br/>RMS Error Minimization"]
-        C --> D["In-Situ Elastic Moduli<br/>(E1, E2, ... En)"]
+flowchart TD
+    %% Styling
+    classDef input fill:#EEF6FF,stroke:#2B6CB0,stroke-width:1.5px,color:#1A365D;
+    classDef process fill:#F7FAFC,stroke:#4A5568,stroke-width:1.5px,color:#2D3748;
+    classDef engine fill:#E6FFFA,stroke:#2C7A7B,stroke-width:2px,color:#234E52;
+    classDef decision fill:#FFFAF0,stroke:#DD6B20,stroke-width:1.5px,color:#7B341E;
+    classDef output fill:#F0FFF4,stroke:#2F855A,stroke-width:2px,color:#22543D;
+
+    subgraph Inputs [" 1. Field Data & Structural Inputs "]
+        direction LR
+        A["<b>FWD / HWD Testing</b><br/>Deflection Bowls (.fwd, .f25, .pddx)"]
+        B["<b>Core Logs & Construction History</b><br/>Layer Thicknesses & Materials"]
     end
 
-    subgraph S2 ["Stage 2: Pavement Design (Airport FWD Pavement Design)"]
-        direction TB
-        E["Aircraft Fleet Traffic Mix<br/>(Gross Weight & Departures)"] --> F["Structural Model Setup<br/>(Using Backcalculated Moduli)"]
-        F --> G["FAARFIELD Analysis Engine<br/>(LEAF & 3D-FEM Solvers)"]
-        G --> H["Final Pavement Thickness,<br/>Overlays & CDF Report"]
+    subgraph Backcalc [" 2. Layer Moduli Backcalculation (BAKFAA 3.4) "]
+        C["<b>Configure Geometry & Offsets</b><br/>Geophone spacings, load & temperatures"]
+        D[["<b>LEAF Elastic Layer Solver</b><br/>Multi-layer modulus iteration"]]
+        E{"<b>RMS Deflection Error</b><br/>Tolerance &lt; 2-3%?"}
+        F(["<b>Evaluated Layer Moduli</b><br/>E1 (Surface), E2 (Base), Esg (Subgrade)"])
     end
 
-    D ==>|"Transfer Moduli"| F
+    subgraph Design [" 3. FAA Pavement & Overlay Design (FAARFIELD 2.1) "]
+        G["<b>Aircraft Fleet & Traffic Mix</b><br/>Gross weights, gear configs & annual departures"]
+        H["<b>Pavement Cross-Section Modeling</b><br/>Flexible, Rigid, or HMA/PCC Overlay"]
+        I[["<b>Damage Analysis (LEAF & 3D-FEM)</b><br/>Cumulative Damage Factor (CDF) analysis"]]
+        J{"<b>Design Life OK?</b><br/>CDF &le; 1.0"}
+    end
+
+    subgraph Output [" 4. Engineering Deliverables "]
+        K(["<b>Final Pavement Design Report</b><br/>Required layer thickness, overlay schedule & CDF report"])
+    end
+
+    %% Connections
+    A --> C
+    B --> C
+    C --> D
+    D --> E
+    E -- "No (Adjust Seeds)" --> D
+    E -- "Yes (Optimal Fit)" --> F
+
+    F ==>|"Transfer Layer Moduli"| H
+    G --> H
+    H --> I
+    I --> J
+    J -- "No (Revise Thickness)" --> H
+    J -- "Yes (Passed)" --> K
+
+    class A,B,G input;
+    class C,H process;
+    class D,I engine;
+    class E,J decision;
+    class F,K output;
 ```
 
 1. **Data Ingestion**: Open Backcalculation and import raw deflection bowl data from your FWD or HWD device.
