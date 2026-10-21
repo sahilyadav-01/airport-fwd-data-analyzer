@@ -32,8 +32,6 @@ namespace AirportFwdDataAnalyzer
         private Panel docsSectionPanel;
         private Label statusLabel;
         private Label copyLabel;
-        private LinkLabel repoLink;
-        private LinkLabel supportLink;
 
         public LauncherForm()
         {
@@ -237,24 +235,26 @@ namespace AirportFwdDataAnalyzer
             this.docsSectionPanel.Controls.Add(presPdfBtn);
 
             // GitHub link
-            this.repoLink = new LinkLabel();
-            this.repoLink.Text = "GitHub Repository";
-            this.repoLink.Font = new Font("Segoe UI", 8.5f, FontStyle.Regular);
-            this.repoLink.LinkColor = this.accentBlue;
-            this.repoLink.ActiveLinkColor = this.accentTeal;
-            this.repoLink.AutoSize = true;
-            this.repoLink.LinkClicked += (s, e) => this.StartShell("https://github.com/sahilyadav-01/airport-fwd-data-analyzer", this.applicationRoot);
-            this.docsSectionPanel.Controls.Add(this.repoLink);
+            LinkLabel repoLink = new LinkLabel();
+            repoLink.Text = "GitHub Repository";
+            repoLink.Font = new Font("Segoe UI", 8.5f, FontStyle.Regular);
+            repoLink.LinkColor = this.accentBlue;
+            repoLink.ActiveLinkColor = this.accentTeal;
+            repoLink.AutoSize = true;
+            repoLink.Location = new Point(602, 38);
+            repoLink.LinkClicked += (s, e) => this.StartShell("https://github.com/sahilyadav-01/airport-fwd-data-analyzer", this.applicationRoot);
+            this.docsSectionPanel.Controls.Add(repoLink);
 
             // Support link
-            this.supportLink = new LinkLabel();
-            this.supportLink.Text = "Technical Support: skonetechsupport@gmail.com";
-            this.supportLink.Font = new Font("Segoe UI", 8.5f, FontStyle.Regular);
-            this.supportLink.LinkColor = this.accentBlue;
-            this.supportLink.ActiveLinkColor = this.accentTeal;
-            this.supportLink.AutoSize = true;
-            this.supportLink.LinkClicked += (s, e) => this.StartShell("mailto:skonetechsupport@gmail.com?subject=Airport%20FWD%20Data%20Analyzer%20Support", this.applicationRoot);
-            this.docsSectionPanel.Controls.Add(this.supportLink);
+            LinkLabel supportLink = new LinkLabel();
+            supportLink.Text = "Technical Support :- skonetechsupport@gmail.com";
+            supportLink.Font = new Font("Segoe UI", 8.5f, FontStyle.Regular);
+            supportLink.LinkColor = this.accentBlue;
+            supportLink.ActiveLinkColor = this.accentTeal;
+            supportLink.AutoSize = true;
+            supportLink.Location = new Point(720, 38);
+            supportLink.LinkClicked += (s, e) => this.StartShell("mailto:skonetechsupport@gmail.com?subject=Airport%20FWD%20Data%20Analyzer%20Support", this.applicationRoot);
+            this.docsSectionPanel.Controls.Add(supportLink);
         }
 
         private Button CreatePillButton(string text, Color backColor, Color textColor, Color borderColor)
@@ -295,15 +295,6 @@ namespace AirportFwdDataAnalyzer
             int docsWidth = (cardWidth * 2) + gap;
             this.docsSectionPanel.Location = new Point(padLeft, docsTop);
             this.docsSectionPanel.Size = new Size(docsWidth, 74);
-
-            if (this.supportLink != null && this.repoLink != null)
-            {
-                int rightMargin = 16;
-                int supportX = this.docsSectionPanel.Width - this.supportLink.PreferredWidth - rightMargin;
-                this.supportLink.Location = new Point(supportX, 10);
-                int repoX = this.supportLink.Left - this.repoLink.PreferredWidth - 20;
-                this.repoLink.Location = new Point(repoX, 10);
-            }
 
             this.PositionCopyLabel();
         }
